@@ -16,13 +16,15 @@ public class HelloWorldController extends Controller {
 		//  - String 을 리턴하기 때문에 타입 변환 필요
 		//  - 파라미터가 넘어오지 않았을 때 디폴트 값 지정 불가
 		// 1)
-		String str = params.getString("str");
-		Integer num1 = params.getInteger("num1");
-		Double num2 = params.getDouble("num2");
+		String str = params.getString("str"); // str 파라미터가 없을 경우 null 대신 "" (빈문자열) 반환
+		String strDefault = params.getString("strDefault", "Default Value"); // strDefault 파라미터가 없는 경우 2번째 인자로 전달된 값이 반환
+		Integer num1 = params.getInteger("num1"); // (주의!)파라미터가 없을 때 숫자로 값을 얻으면 0 을 반환, null 대신 0이 유익하다고 판단했음.
+		Double num2 = params.getDouble("num2"); // 다만 진짜 0과 값이 없는 0을 구분하기 위한 방법이 필요. 진짜 0일 경우 숫자로 받아내는 대신 String으로 받는것을 권장
 		Long num3 = params.getLong("num3");
-		String raw = params.getRawString("raw");
+		String raw = params.getRawString("raw"); // getString의 경우 입력값 보안취약점 처리를 자동으로 하므로 태그가 escape됨. 게시판 내용 등 태그형식이 필요할 경우 getRawString을 아주 제한적으로 사용할 것
 		
 		logger.debug("str=" + str);
+		logger.debug("strDefault=" + strDefault);
 		logger.debug("num1=" + num1);
 		logger.debug("num2=" + num2);
 		logger.debug("num3=" + num3);
