@@ -31,8 +31,7 @@
 3) HelloWorld(Controller, routes.properties) (예제)
   - HelloWorldController 생성
   - routes.properties 추가 => url 패스 = 컨트롤러.메소드
-4) Run As Server
-  - http://localhost:8080/ch1/hello.do
+4) Run on Server
 ---
 
 ## ch2. web.xml 설명
