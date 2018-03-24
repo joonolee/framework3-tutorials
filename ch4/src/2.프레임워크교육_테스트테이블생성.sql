@@ -1,7 +1,7 @@
 /*==============================================================*/
 /* Table: TEST                                                  */
 /*==============================================================*/
-create table TEST 
+create table TEST
 (
    PK                   INT                  not null,
    COL1                 VARCHAR2(100),
@@ -11,36 +11,36 @@ create table TEST
 );
 
 comment on table TEST is
-'�׽�Ʈ ���̺�';
+'테스트 테이블';
 
 comment on column TEST.PK is
-'����Ű';
+'고유키';
 
 comment on column TEST.COL1 is
-'�����÷�';
+'문자컬럼';
 
 comment on column TEST.COL2 is
-'�����÷�';
+'숫자컬럼';
 
 comment on column TEST.ENTERDATE is
-'����Ͻ�';
+'등록일시';
 
 
-insert into test(pk, col1, col2, enterdate) values (1, 'ȫ�浿1', 11, sysdate);
-insert into test(pk, col1, col2, enterdate) values (2, 'ȫ�浿2', 12, sysdate);
-insert into test(pk, col1, col2, enterdate) values (3, 'ȫ�浿3', 13, sysdate);
-insert into test(pk, col1, col2, enterdate) values (4, 'ȫ�浿4', 14, sysdate);
-insert into test(pk, col1, col2, enterdate) values (5, 'ȫ�浿5', 15, sysdate);
-insert into test(pk, col1, col2, enterdate) values (6, 'ȫ�浿6', 16, sysdate);
-insert into test(pk, col1, col2, enterdate) values (7, 'ȫ�浿7', 17, sysdate);
-insert into test(pk, col1, col2, enterdate) values (8, 'ȫ�浿8', 18, sysdate);
-insert into test(pk, col1, col2, enterdate) values (9, 'ȫ�浿9', 19, sysdate);
-insert into test(pk, col1, col2, enterdate) values (10, 'ȫ�浿10', 20, sysdate);
+insert into test(pk, col1, col2, enterdate) values (1, '홍길동1', 11, sysdate);
+insert into test(pk, col1, col2, enterdate) values (2, '홍길동2', 12, sysdate);
+insert into test(pk, col1, col2, enterdate) values (3, '홍길동3', 13, sysdate);
+insert into test(pk, col1, col2, enterdate) values (4, '홍길동4', 14, sysdate);
+insert into test(pk, col1, col2, enterdate) values (5, '홍길동5', 15, sysdate);
+insert into test(pk, col1, col2, enterdate) values (6, '홍길동6', 16, sysdate);
+insert into test(pk, col1, col2, enterdate) values (7, '홍길동7', 17, sysdate);
+insert into test(pk, col1, col2, enterdate) values (8, '홍길동8', 18, sysdate);
+insert into test(pk, col1, col2, enterdate) values (9, '홍길동9', 19, sysdate);
+insert into test(pk, col1, col2, enterdate) values (10, '홍길동10', 20, sysdate);
 
 /*==============================================================*/
 /* Table: TEST2                                                  */
 /*==============================================================*/
-create table TEST2 
+create table TEST2
 (
    PK                   INT                  not null,
    COL1                 VARCHAR2(100),
@@ -50,28 +50,28 @@ create table TEST2
 );
 
 comment on table TEST2 is
-'�׽�Ʈ ���̺�';
+'테스트 테이블';
 
 comment on column TEST2.PK is
-'����Ű';
+'고유키';
 
 comment on column TEST2.COL1 is
-'�����÷�';
+'문자컬럼';
 
 comment on column TEST2.COL2 is
-'�����÷�';
+'숫자컬럼';
 
 comment on column TEST2.ENTERDATE is
-'����Ͻ�';
+'등록일시';
 
 
-insert into test2(pk, col1, col2, enterdate) values (1, 'ȫ�浿1', 11, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (2, 'ȫ�浿2', 12, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (3, 'ȫ�浿3', 13, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (4, 'ȫ�浿4', 14, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (5, 'ȫ�浿5', 15, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (6, 'ȫ�浿6', 16, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (7, 'ȫ�浿7', 17, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (8, 'ȫ�浿8', 18, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (9, 'ȫ�浿9', 19, sysdate);
-insert into test2(pk, col1, col2, enterdate) values (10, 'ȫ�浿10', 20, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (1, '홍길동1', 11, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (2, '홍길동2', 12, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (3, '홍길동3', 13, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (4, '홍길동4', 14, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (5, '홍길동5', 15, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (6, '홍길동6', 16, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (7, '홍길동7', 17, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (8, '홍길동8', 18, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (9, '홍길동9', 19, sysdate);
+insert into test2(pk, col1, col2, enterdate) values (10, '홍길동10', 20, sysdate);
