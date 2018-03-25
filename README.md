@@ -81,6 +81,7 @@
 - mybatis-config.xml
 - mybatis-mapper.xml
 - List<RecordMap>, RecordMap
+- 대용량 데이터 조회 시 mybatis ResultHandler 사용한 CSV 전송 예제
 - (예제)
 ---
 
