@@ -82,17 +82,16 @@
 - mybatis-mapper.xml
 - List<RecordMap>, RecordMap
 - 대용량 데이터 조회 시 mybatis ResultHandler 사용한 CSV 전송 예제
-- (예제)
 ---
 
 ## ch5. 자동생성 DAO, VO
 
-- daogen
-- Download
-- db.properties
-- dao.xsl, vo.xsl
-- generation (예제)
-- insert, select, updateOnlyFields
+- daogen : DB테이블을 참조하여 DAO, VO를 자동생성해주는 유틸리티
+- Download : https://github.com/joonolee/framework3
+- db.properties : 접속할 DB 정보
+- dao.xsl, vo.xsl : DAO, VO 템플릿
+- generation (예제) : DaogenForXXX.java 파일을 Application 으로 실행하여 생성 _tbList = Arrays.asList("테이블1", "테이블2"), 빈리스트일 경우 모든테이블에 대한 DAO, VO가 생성됨
+- insert, select, updateOnlyFields, delete
 - ValueObjectArray, 대용량 배치처리 (예제)
 ---
 
@@ -100,16 +99,34 @@
 
 - ehcache.xml
 - memcached.properties
+- Cache.set(), Cache.get() 을 사용
 ---
 
 ## ch7. 각종Util
 
-- ExcelUtil
-- JsonUtil
-- HttpUtil
-- XmlUtil
-- StringUtil
-- FileUtil
-- DateUtil
+- 사용법은 javadoc 문서 참조
 - CryptUtil
+- CsvUtil
+- DataTablesUtil
+- DateUtil
+- EmailUtil
+- ExcelUtil
+- FileUtil
+- GauceUtil
+- HttpUtil
 - ImageUtil
+- JqGridUtil
+- JsonUtil
+- MaSaferUtil
+- MiPlatformUtil
+- NexacroUtil
+- OAuth10aUtil
+- PagingUtil
+- PatternUtil
+- PdfUtil
+- RDUtil
+- RssUtil
+- StringUtil
+- ValidationUtil
+- VelocityUtil
+- XmlUtil
