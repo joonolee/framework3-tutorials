@@ -1,4 +1,4 @@
-# framework3-education
+# framework3-tutorials
 
 ## ch0. 개발환경 설정
 
