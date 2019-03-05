@@ -1,5 +1,4 @@
 
-
 import com.vo.TEST2DAO;
 import com.vo.TEST2VO;
 import com.vo.TESTDAO;
@@ -29,6 +28,8 @@ public class HelloWorldController extends Controller {
 		// 커밋을 반드시 해야 DML 작업이 반영된다.
 		getDB().commit();
 
+		// 결과를 브라우저에 출력해 봄
+		setContentType("text/html; charset=utf-8");
 		out.println("<h1>인서트 건수 = " + cnt + "</h1>");
 	}
 
@@ -64,8 +65,8 @@ public class HelloWorldController extends Controller {
 		vo.setPK(Long.valueOf(1));
 		vo.setCOL1("홍길동101");
 
-		// 업데이트의 경우, COL1만 변경하고 다른 컬럼은 변경되지 않는다. 
-		// dao.update 메소드의 경우 vo 값을 참조하여 모든 컬럼이 갱신되므로 실무에서는 사용할 일이 없다. 
+		// 업데이트의 경우, COL1만 변경하고 다른 컬럼은 변경되지 않는다.
+		// dao.update 메소드의 경우 vo 값을 참조하여 모든 컬럼이 갱신되므로 실무에서는 사용할 일이 없다.
 		// 실무에서는 아래 예제와 같이 dao.updateOnlyFields 로 변경할 필드를 지정하는 방식으로만 사용한다.
 		TESTDAO dao = new TESTDAO(getDB());
 		int cnt = dao.updateOnlyFields(vo, new String[] { "col1" });
@@ -73,6 +74,8 @@ public class HelloWorldController extends Controller {
 		// 커밋을 반드시 해야 DML 작업이 반영된다.
 		getDB().commit();
 
+		// 결과를 보기 위해 브라우저에 출력해 봄
+		setContentType("text/html; charset=utf-8");
 		out.println("<h1>업데이트 건수 = " + cnt + "</h1>");
 	}
 
@@ -89,13 +92,14 @@ public class HelloWorldController extends Controller {
 		// 커밋을 반드시 해야 DML 작업이 반영된다.
 		getDB().commit();
 
+		// 결과를 보기 위해 브라우저에 출력해 봄
+		setContentType("text/html; charset=utf-8");
 		out.println("<h1>삭제 건수 = " + cnt + "</h1>");
 	}
 
 	// http://localhost:8080/ch5/multi_insert.do
 	public void multiInsert() {
 		// 배치 방식이 아닌 한건한건 insert 문을 전송하는 방식으로 대량 입력 시 비효율
-
 		TESTDAO dao = new TESTDAO(getDB());
 
 		// 10만건 입력
@@ -111,12 +115,14 @@ public class HelloWorldController extends Controller {
 		getDB().commit();
 		long end = System.currentTimeMillis();
 
+		// 결과를 보기 위해 브라우저에 출력해 봄
+		setContentType("text/html; charset=utf-8");
 		out.println("<h1>걸린시간(밀리초) = " + (end - start) + "</h1>");
 	}
 
 	// http://localhost:8080/ch5/multi_batch_insert.do
 	public void multiBatchInsert() {
-		// 배치 방식으로 한번에  insert 문을 전송하는 방식으로 대량 입력 시 효율적임		
+		// 배치 방식으로 한번에  insert 문을 전송하는 방식으로 대량 입력 시 효율적임
 		TEST2DAO dao = new TEST2DAO(getDB());
 		ValueObjectArray voArray = new ValueObjectArray();
 
@@ -135,6 +141,8 @@ public class HelloWorldController extends Controller {
 		getDB().commit();
 		long end = System.currentTimeMillis();
 
+		// 결과를 보기 위해 브라우저에 출력해 봄
+		setContentType("text/html; charset=utf-8");
 		out.println("<h1>걸린시간(밀리초) = " + (end - start) + "</h1>");
 	}
 }

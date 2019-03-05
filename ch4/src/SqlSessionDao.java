@@ -15,12 +15,12 @@ public class SqlSessionDao extends SqlSessionDaoSupport {
 	public List<RecordMap> listAll() {
 		return selectList("Test.listAll");
 	}
-	
+
 	public RecordMap listOne() {
 		return selectOne("Test.listOne");
 	}
-	
+
 	public void listAll2(ResultHandler resultHandler) {
-		select("Test.listAll", resultHandler);	
+		select("Test.listAll", resultHandler);
 	}
 }

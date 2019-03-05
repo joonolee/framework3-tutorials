@@ -8,7 +8,7 @@ public class JdbcDao extends JdbcDaoSupport {
 	public JdbcDao(DB db) {
 		super(db);
 	}
-	
+
 	public RecordSet listAll() {
 		StringBuilder query = new StringBuilder();
 		query.append("select  ");
@@ -19,7 +19,7 @@ public class JdbcDao extends JdbcDaoSupport {
 		query.append("from test ");
 		return select(query.toString());
 	}
-	
+
 	public RecordSet listOne() {
 		StringBuilder query = new StringBuilder();
 		SelectConditionObject cond = new SelectConditionObject();
@@ -33,5 +33,4 @@ public class JdbcDao extends JdbcDaoSupport {
 		cond.setObject(1);
 		return select(query.toString(), cond.getParameter());
 	}
-
 }

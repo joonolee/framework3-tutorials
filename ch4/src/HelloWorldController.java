@@ -67,6 +67,7 @@ public class HelloWorldController extends Controller {
 		Long seqAuditlog = getSeqDao().getSeqAuditlog();
 
 		// DB에서 가져온 시퀀스를 화면에 출력해 본다.
+		setContentType("text/html; charset=utf-8");
 		out.println("<h1>Audit log Sequence=" + seqAuditlog + "</h1>");
 	}
 
@@ -103,7 +104,7 @@ public class HelloWorldController extends Controller {
 			@Override
 			public void handleResult(ResultContext resultContext) {
 				// 한줄 씩 읽어 CSV 형식으로 웹브라우저에 전송
-				out.println(CsvUtil.render((RecordMap) resultContext.getResultObject(), ","));
+				out.println(CsvUtil.render((RecordMap) resultContext.getResultObject(), "|"));
 			}
 		};
 		// 결과를 보기 위해 CSV로 브라우저에 출력해 봄
